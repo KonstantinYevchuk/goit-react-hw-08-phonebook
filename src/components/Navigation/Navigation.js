@@ -1,4 +1,4 @@
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import { useAuth } from 'hooks';
 import { StyledLink } from "./Navigation.styled";
 
@@ -11,6 +11,7 @@ export const Navigation = () => {
       <StyledLink to="/">
         Home
       </StyledLink>
+      <NavLink to ="/contacts">Contacts</NavLink>
       {/* {isLoggedIn && (
         <NavLink className={css.link} to="/tasks">
           Tasks

@@ -32,7 +32,7 @@ export const App = () => {
           element={<LoginPage />}  
         />
         <Route
-          path="/tasks"
+          path="/contacts"
           element={<ContactsPage />} 
         />
       </Route>
@@ -40,10 +40,10 @@ export const App = () => {
     ); 
 };
 
- // <Container>
-      //   <MainTitle>Phonebook</MainTitle>
-      //   <Form />
-      //   <Title> Contacts</Title>
-      //     <Filter />
-      //     <ContactsList /> 
-      // </Container> 
+//  <Container>
+//         <MainTitle>Phonebook</MainTitle>
+//         <Form />
+//         <Title> Contacts</Title>
+//           <Filter />
+//           <ContactsList /> 
+//       </Container> 
