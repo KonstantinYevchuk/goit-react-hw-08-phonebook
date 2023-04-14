@@ -1,18 +1,17 @@
 import { useDispatch } from "react-redux";
-// import { addContact } from "redux/contactsSlice";
 import { addContact } from "redux/operations";
 // import { getContacts } from "redux/selectors";
 // import { useState } from 'react';
-// import PropTypes from 'prop-types';
+
 import { FormContainer, Label, Input, Btn } from './Form.styled';
 
 export const Form = () => {
     const dispatch = useDispatch();
+    // const contacts = useState(getContacts)
     const formSubmit = event => {
       event.preventDefault();
       const form = event.target;
-      // console.log(contacts);
-      // console.log(form.name.value);
+     
       // contacts.some(contact => {
       //   contact.name === form.name.value ? alert(`oopps`)})
       dispatch(addContact({

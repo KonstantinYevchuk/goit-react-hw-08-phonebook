@@ -1,22 +1,26 @@
-// import { useDispatch } from 'react-redux';
-// import { logOut } from 'redux/auth/operations';
-// import { useAuth } from 'hooks';
+import { useDispatch } from 'react-redux';
+import { logOut } from 'redux/auth/operations'; 
+import { useAuth } from 'hooks/useAuth'; 
+import { Wrapper, Username } from './UserMenu.styled';
+import Button from '@mui/material/Button';
 
 
 export const UserMenu = () => {
-//   const dispatch = useDispatch();
-//   const { user } = useAuth();
+  const dispatch = useDispatch();
+  const { user } = useAuth();
 
   return (
-    <div>
-      <p>Welcome,</p> 
-      <button 
+    <Wrapper>
+      <Username>Welcome, {user.name}</Username> 
+      <Button 
       type="button" 
-    //   onClick={() => dispatch(logOut())}
+      size="small" 
+      variant="contained"
+      onClick={() => dispatch(logOut())}
       >
         Logout
-      </button>
-    </div>
+      </Button>
+    </Wrapper>
   );
 };
 // {user.name}

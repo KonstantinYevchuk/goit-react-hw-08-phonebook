@@ -18,6 +18,7 @@ export const Label = styled.label`
     text-align: start;
     border-radius: 5px;
     margin: 0 auto 15px auto;
+    font-weight: 500;
 `;
 export const Input = styled.input`
     padding: 8px 12px;

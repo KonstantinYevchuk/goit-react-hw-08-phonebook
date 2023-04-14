@@ -1,11 +1,15 @@
-// import styled from "@emotion/styled";
+import styled from "@emotion/styled";
 
-// .wrapper {
-//     display: flex;
-//     align-items: center;
-//     gap: 12px;
-//   }
+
+export const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 12px;
+`
+export const Username = styled.p`
+    font-weight: 700;
+`
+   
   
-//   .username {
-//     font-weight: 700;
-//   }
+  
+  

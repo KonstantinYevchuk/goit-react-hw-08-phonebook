@@ -4,7 +4,7 @@ export default function Home() {
     return (
       <Container>
         <Title>
-          Contacts manager welcome page
+          Contacts Manager Welcome Page
           </Title>
         </Container>
     );
