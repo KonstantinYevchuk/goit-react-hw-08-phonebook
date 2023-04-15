@@ -3,6 +3,7 @@ import { logIn } from 'redux/auth/operations';
 import { Form, Label } from "./LoginForm.styled";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { Toaster } from 'react-hot-toast';
 
 
 export const LoginForm = () => {
@@ -49,6 +50,7 @@ export const LoginForm = () => {
       variant="contained"
       >Log In
       </Button>
+      <Toaster position="top-center" reverseOrder={false} />
     </Form>
   );
 };

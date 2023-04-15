@@ -3,6 +3,7 @@ import { register } from 'redux/auth/operations';
 import { Form, Label } from "./RegistrationForm.styled";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { Toaster } from 'react-hot-toast';
 
 
 export const RegistrationForm = () => {
@@ -56,6 +57,7 @@ export const RegistrationForm = () => {
         />
       </Label>
       <Button type="submit" size="medium" variant="contained">Register</Button>
+      <Toaster position="top-center" reverseOrder={false} />
     </Form>
   );
 };

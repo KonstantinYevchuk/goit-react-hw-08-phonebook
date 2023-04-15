@@ -10,6 +10,7 @@ import { useAuth } from 'hooks/useAuth';
 import { Loader } from './Loader/Loader';
 
 
+
 const HomePage = lazy(() => import('pages/Home/Home'));
 const RegisterPage = lazy(() => import('pages/Register/Register'));
 const LoginPage = lazy(() => import('pages/Login/Login'));
