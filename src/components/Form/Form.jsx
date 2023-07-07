@@ -3,8 +3,8 @@ import { addContact } from "redux/operations";
 import { getContacts } from "redux/selectors";
 import { useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
-
-import { FormContainer, Label, Input, Btn } from './Form.styled';
+import Button from '@mui/material/Button';
+import { FormContainer, Label, Input } from './Form.styled';
 
 export const Form = () => {
     const dispatch = useDispatch();
@@ -86,7 +86,13 @@ export const Form = () => {
               onChange={handleChange}
               />
               </Label>
-              <Btn type="submit">Add contact</Btn>
+              <Button 
+              type="submit"
+              size="small" 
+              variant="contained"
+              >
+                Add contact
+              </Button>
               <Toaster position="top-center" reverseOrder={false} />
               </FormContainer> 
             </div>

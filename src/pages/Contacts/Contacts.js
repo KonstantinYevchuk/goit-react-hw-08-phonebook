@@ -1,14 +1,9 @@
-// import { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { Form } from 'components/Form/Form';
 import { ContactsList } from 'components/ContactsList/ContactsList'; 
 import { Filter } from 'components/Filter/Filter'; 
-import { Container, MainTitle, Title } from 'components/App.styled';
-// import { TaskList } from 'components/TaskList/TaskList';
-// import { TaskEditor } from 'components/TaskEditor/TaskEditor';
-// import { fetchTasks } from 'redux/tasks/operations';
-// import { selectLoading } from 'redux/tasks/selectors';
+import { Container, MainTitle, Title } from 'pages/Contacts/Contacts.styled';
+
 
 export default function Contacts() {
  

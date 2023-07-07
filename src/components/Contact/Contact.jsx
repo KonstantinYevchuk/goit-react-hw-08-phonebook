@@ -4,7 +4,7 @@ import { getIsLoading } from "redux/selectors";
 import { Loader } from "components/Loader/Loader";
 // import { deleteContact } from 'redux/contactsSlice';
 import { deleteContact } from "redux/operations";
-import { Button } from './Contact.styled';
+import Button from '@mui/material/Button';
 
 export const Contact = ({contact}) => {
     const dispatch = useDispatch();
@@ -13,7 +13,11 @@ export const Contact = ({contact}) => {
     return (
         <>
             {contact.name}: {contact.number}
-            <Button type="button" onClick={handleDelete} >
+            <Button 
+            type="button" 
+            size="small" 
+            variant="contained"
+            onClick={handleDelete} >
             {isLoading && <Loader size={5}/>  }
                 Delete
                 </Button>

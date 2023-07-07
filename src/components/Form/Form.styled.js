@@ -5,9 +5,10 @@ export const FormContainer = styled.form`
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     width: 340px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 `;
 export const Label = styled.label`
     font-size: 18px;
@@ -36,20 +37,4 @@ export const Input = styled.input`
 
     } 
 `;
-export const Btn = styled.button`
-    font-size: 16px;
-    padding: 5px 15px;
-    color: white;
-    background-color: blue;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    outline: none;
-    transition: all 300ms ease-in-out;
-    
-    &:hover,
-    &:focus {
-        transform: scale(1.15);
-        background-color: orange; 
-    }
-`
+

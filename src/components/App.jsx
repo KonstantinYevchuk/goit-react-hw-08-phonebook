@@ -1,4 +1,3 @@
-// import { useState, useEffect } from 'react';
 import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';

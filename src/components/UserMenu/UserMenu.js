@@ -18,9 +18,8 @@ export const UserMenu = () => {
       variant="contained"
       onClick={() => dispatch(logOut())}
       >
-        Logout
+        Log out
       </Button>
     </Wrapper>
   );
 };
-// {user.name}

@@ -3,12 +3,11 @@ import { fetchContacts } from "redux/operations";
 import { getContacts, getFilter } from 'redux/selectors';
 import { useEffect } from "react";
 import { Contact } from 'components/Contact/Contact';
-import { ErrorText } from "components/App.styled";
+import { ErrorText } from "pages/Contacts/Contacts.styled";
 
 import { List, Item } from './ContactsList.styled';
 import { getIsLoading } from "redux/selectors";
 import { Loader } from "components/Loader/Loader";
-
 
 
 export const ContactsList = () => {
