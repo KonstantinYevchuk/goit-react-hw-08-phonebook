@@ -70,6 +70,7 @@ export const Form = () => {
                name="name"
                value={name}
                pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+               placeholder="John"
                title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                required
                onChange={handleChange}
@@ -80,7 +81,8 @@ export const Form = () => {
               type="tel"
               name="number"
               value={number}
-              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              placeholder="380-888-88-88"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
               onChange={handleChange}
