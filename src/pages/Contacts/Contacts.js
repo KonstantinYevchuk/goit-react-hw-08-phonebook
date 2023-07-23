@@ -19,9 +19,6 @@ export default function Contacts() {
           <Filter />
           <ContactsList /> 
       </Container> 
-      {/* <TaskEditor /> */}
-      {/* <div>{isLoading && 'Request in progress...'}</div> */}
-      {/* <TaskList /> */}
     </>
   );
 }
