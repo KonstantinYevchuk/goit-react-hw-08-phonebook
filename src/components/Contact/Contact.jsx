@@ -1,10 +1,11 @@
-
 import { useDispatch, useSelector } from "react-redux";
 import { getIsLoading } from "redux/selectors";
 import { Loader } from "components/Loader/Loader";
-// import { deleteContact } from 'redux/contactsSlice';
 import { deleteContact } from "redux/operations";
 import Button from '@mui/material/Button';
+
+
+import { MdOutlineDeleteOutline } from "react-icons/md";
 
 export const Contact = ({contact}) => {
     const dispatch = useDispatch();
@@ -12,14 +13,14 @@ export const Contact = ({contact}) => {
     const handleDelete = () => dispatch(deleteContact(contact.id));
     return (
         <>
-            {contact.name}: {contact.number}
+            {contact.name}: <br /> {contact.number}
             <Button 
             type="button" 
-            size="small" 
+            size="medium" 
             variant="contained"
             onClick={handleDelete} >
             {isLoading && <Loader size={5}/>  }
-                Delete
+                <MdOutlineDeleteOutline size="23px"/>
                 </Button>
         </>    
     )
