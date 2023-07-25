@@ -1,22 +1,12 @@
 import styled from '@emotion/styled';
 
-export const Button = styled.button`
+
+export const Title = styled.h2`
+    font-size: 18px;
+    text-align: start;
+`;
+
+export const ButtonContainer = styled.div`
     display: flex;
-    justify-content: center;
-    padding: 5px 7px;
-    min-width: 70px;
-    color: white;
-    background-color: blue;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 5px; 
-    outline: none;
-    transition: all 300ms ease-in-out;
-    
-    &:hover,
-    &:focus {
-        transform: scale(1.1);
-        background-color: orange;
-     
-    }
+    gap: 10px;
 `

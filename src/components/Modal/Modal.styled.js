@@ -18,7 +18,6 @@ export const ModalWindow = styled.div`
     padding: 24px 24px 24px 24px;
     border-radius: 8px;
     border: 1px solid rgba(190, 219, 176, 0.50);
-    /* background: var(--modal-bg-color);
-    color: var(--first-text-color); */
+    background-color: #fff;
     
 `;
