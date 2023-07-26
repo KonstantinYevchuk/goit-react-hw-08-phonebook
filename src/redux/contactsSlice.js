@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { fetchContacts, addContact, deleteContact } from './operations';
+import { fetchContacts, addContact, deleteContact, editContact } from './operations';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -38,14 +38,19 @@ const constacsSlice = createSlice({
     [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
-      // const index = state.items.findIndex(
-      //   contact => contact.id === action.payload.id
-      // );
-      // state.items.splice(index, 1);
       state.items = state.items.filter(item => item.id !== action.payload.id)
     },
     [deleteContact.rejected]: handleRejected,
-    
+    [editContact.pending]: handlePending,
+    [editContact.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      const index = state.items.findIndex(
+        item => item.id === action.payload.id
+      );
+      state.items[index] = action.payload;
+    },
+    [editContact.rejected]: handleRejected,
   },
   });
 
@@ -53,31 +58,3 @@ const constacsSlice = createSlice({
 export const contactsReducer = constacsSlice.reducer;
 
 
-
-
-
-
-
-// reducers: {
-//   addContact: {
-//     reducer(state, action) {
-//       state.contacts.items.some(contact => contact.name === action.payload.name)
-//         ? alert(
-//             `${action.payload.name}, Contact with such name is already exists!`
-//           ) :
-//         state.contacts.items.push(action.payload);
-//     },
-//     prepare({ name, number }) {
-//       return {
-//         payload: {
-//           name,
-//           id: nanoid(),
-//           number,
-//         },
-//       };
-//     },
-//   },
-//   deleteContact(state, action) {
-//     state.contacts.items = state.contacts.items.filter(item => item.id !== action.payload);
-//   },
-// },

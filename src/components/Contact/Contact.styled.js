@@ -5,6 +5,9 @@ export const Title = styled.h2`
     font-size: 18px;
     text-align: start;
 `;
+export const Number = styled.p`
+    text-align: start;
+`;
 
 export const ButtonContainer = styled.div`
     display: flex;

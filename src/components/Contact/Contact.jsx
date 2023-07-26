@@ -4,7 +4,8 @@ import { getIsLoading } from "redux/selectors";
 import { Loader } from "components/Loader/Loader";
 import { deleteContact } from "redux/operations";
 import { Modal } from "../Modal/Modal";
-import { Title, ButtonContainer } from "./Contact.styled";
+import { EditForm } from "../EditForm/EditForm";
+import { Title, Number, ButtonContainer } from "./Contact.styled";
 import Button from '@mui/material/Button';
 
 import { AiFillEdit } from "react-icons/ai";
@@ -24,7 +25,7 @@ export const Contact = ({contact}) => {
         <>
             <div>
             <Title>{contact.name}:</Title>
-            <p>{contact.number}</p>
+            <Number>{contact.number}</Number>
             </div> 
             <ButtonContainer>
             <Button
@@ -47,6 +48,7 @@ export const Contact = ({contact}) => {
             {isOpen && (
             <Modal
             onClose={toggleModal}
+            children={<EditForm onClose={toggleModal} contact={contact}/>}
             />
             )}    
         </>    

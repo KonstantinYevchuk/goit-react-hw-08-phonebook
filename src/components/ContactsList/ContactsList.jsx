@@ -11,17 +11,17 @@ import { Loader } from "components/Loader/Loader";
 
 
 export const ContactsList = () => {
-    const contacts = useSelector(getContacts);
-    const filter = useSelector(getFilter);
     const dispatch = useDispatch();
-    const isLoading = useSelector(getIsLoading)
-    
+    const isLoading = useSelector(getIsLoading);
     useEffect(() => {
         dispatch(fetchContacts());
       }, [dispatch]);
-      
+
+    const contacts = useSelector(getContacts);
+    const filter = useSelector(getFilter);
     const filteredContacts = contacts.filter(contact => 
     contact.name.toLowerCase().includes(filter.toLowerCase()));
+    
     return (
         <List>
             {isLoading && <Loader />}
@@ -35,10 +35,3 @@ export const ContactsList = () => {
     ) 
 }
 
-// ContactsList.propTypes = {
-//     contacts: PropTypes.arrayOf(PropTypes.exact({
-//         id: PropTypes.string.isRequired,
-//         name: PropTypes.string.isRequired,
-//         number: PropTypes.string.isRequired
-//     }).isRequired).isRequired
-// }
